@@ -54,7 +54,6 @@ General Configs:
 Resource Configs:
 | File                                  | description                                                                                   |
 |---------------------------------------|-----------------------------------------------------------------------------------------------|
-|[dns.tf](dns.tf)                       | Manages Domains from Route 53. If you are not going to use this, you will need to update DNS manually and will likely get an error on the first apply as the ACM certificate will not be verified till you add the DNS record to your domain |
 |[ssh.tf](ssh.tf)                       | Manages the SSH KeyPair used for the Jump Box and the Web Servers. It generates the KeyPair and adds it into the AWS Secrets Manager |
 |[efs.tf](efs.tf)                       | To ensure all the web servers have the same site files, this config manages the Elastic File System (EFS) network storage which is mounted to all the web servers and the jump box |
 |[jumpbox.tf](jumpbox.tf)               | This manages the jump box through ASG. The jump box is the only way to get into the web servers operating system and the RDS database |
