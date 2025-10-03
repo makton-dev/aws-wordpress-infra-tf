@@ -59,7 +59,7 @@ Resource Configs:
 |[efs.tf](efs.tf)                       | To ensure all the web servers have the same site files, this config manages the Elastic File System (EFS) network storage which is mounted to all the web servers and the jump box |
 |[jumpbox.tf](jumpbox.tf)               | This manages the jump box through ASG. The jump box is the only way to get into the web servers operating system and the RDS database |
 |[web_servers.tf](web_servers.tf)       | This manages the web servers through ASG and references the load balancer which the web servers are behind |
-|[load_balancer.tf](load_balancer.tf)   | This manages the Application Load Balancer |
+|[akb.tf](alb.tf)   | This manages the Application Load Balancer |
 |[cdn.tf](cdn.tf)         | Manages the CDN and caching |
 |[certificates.tf](certificates.tf)     | The project uses Amazon Certificate Manager (it's free). This config creates any needed certificates for the Dragon |Solutions domain |
 |[s3.tf](s3.tf)                         | Manages the site config bucket usedby web servers to get needed files for launching the website |
